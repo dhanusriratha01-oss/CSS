@@ -1,0 +1,129 @@
+/* color , fontsize */
+h1{
+    color: red;
+    background-color: aquamarine;
+    font: size 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
+}
+
+/* pseudo element */
+h1::before{
+    content: "⭐";
+}
+h1::after{
+    content: "⭐";
+}
+.hi{
+    color: rgb(0, 200, 255);
+    font-size: 2rem;
+    font-family: monospace;
+    font-weight : 900;
+
+}
+div{
+    width: auto;
+    height:auto;
+    padding: 10px 20px 30px 40px;
+    border: 5px double rgb(144, 130, 238);
+    border-radius: 20px;
+    margin: 5px 8px;
+    display:grid;
+    grid-template-columns: 20px 20px 20px;
+    justify-content:baseline;
+    align-items:end;
+    gap: 20px;
+    text-align:left;
+}
+
+/* flexbox */
+.container{
+    display:block;
+    gap:10px;
+    flex-direction:row-reverse;
+    justify-content: center;
+    position:relative;
+    
+    z-index: 2;
+    top: 20px;
+    left:30px;
+    overflow:scroll;
+    background-color:rgb(216, 143, 155);
+    animation: colorChange 1s;
+    transform:scale(1);
+    
+}
+.text{
+    position:absolute;
+    top: 20px;
+    left:30px;
+
+}
+@keyframes colorChange {
+    from {
+        background-color: rgb(190, 190, 228);
+    }
+
+    to {
+        background-color: rgb(234, 134, 150);
+    }
+
+}
+@media (max-width: 600px){
+
+.box{
+    padding: 20px;
+    overflow:visible;
+    box-shadow:inset 0 0 10px gray;
+    text-align:right;
+    transform:rotate(45deg);
+    
+    
+} 
+} 
+
+.butt{
+    cursor:text;
+    background-color: rgb(209, 54, 40);
+    opacity: 1;
+    transition:background-color 1s;
+    
+        
+}
+
+
+/* pseudo,cursor */
+.butt:hover{
+    background-color: blue;
+}
+
+/* variabbles */
+:root{
+    --imp-color:blue;
+}
+.about{
+    background-color: var(--imp-color);
+}
+
+*{
+    text-align: center;
+}
+
+ /* PSEUDO CLASSES */
+.but:focus{
+    background-color: green;
+    transform: scale(0.95);
+
+
+}
+li:first-child{
+    color: red;
+}
+li:last-child{
+    color: blueviolet;
+}
+li:nth-child(2){
+    color: brown;
+}
+
+
+
